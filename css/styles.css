@@ -237,9 +237,7 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* animation-name: modal-animation; 
-    animation-duration: 250ms;
-    animation-timing-function: linear; */
+    
     
 }
 .close-bttn{
@@ -258,23 +256,7 @@ header{
     cursor: pointer;
 }
 
-@keyframes modal-animation{
-    0%{
-        scale: 0;
-        opacity: 0;
-        transform: translate(30px, 100px);
-    }
-    50%{
-        scale: .5;
-        opacity: .5;
-        transform: translate(500px, 150px);
-    }
-    100%{
-        scale: 1;
-        opacity: 1;
-        transform: translate(100px, 200px);
-    }
-}
+
 
 .button-parent-element{
     display: flex;
@@ -282,6 +264,152 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+.contact-form{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.form-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--section-titles-color);
+    margin-bottom: 12px;
+    padding-top: 40px;
+}
+
+.contact-form > label{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    position: relative;
+    margin-top: 10px;
+    color:var(--contact-info-header);
+
+}
+.input-name{
+    width: 100%;
+    height: 40px;
+    margin-top:4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border var(--time) var(--time-function);
+    padding-left:40px;
+    margin-top: 4px;
+}
+.icon-person-svg{
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    fill: var(--main-color);
+    cursor: pointer;
+    transition: color var(--time) var(--time-function);
+}
+
+
+.input-name:hover + .icon-person-svg,
+.input-name:focus + .icon-person-svg{
+    fill: var(--active-and-hover-color);
+}
+.input-name:hover,
+.input-name:focus{
+    border: 1px solid var(--active-and-hover-color);
+}
+.textarea::placeholder{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.textarea{
+    padding-left: 16px;
+    padding-top: 12px;
+    width: 100%;
+    margin-top:4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border var(--time) var(--time-function);
+}
+.textarea:hover,
+.textarea:focus{
+    border: 1px solid var(--active-and-hover-color);
+}
+.label-check-container{
+    margin-top: 10px;
+    /* position: relative; */
+}
+.chk-bx-svg{
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--section-titles-color);
+    cursor: pointer;
+    fill: none;
+    border-radius: 2px;
+    margin-right: 9px;
+    /* position: absolute;
+    top:0;
+    left: 10px; */
+}
+
+.chk-bx-svg:hover,
+.chk-bx-svg:focus,
+.form-chk-bx:checked:focus + .chk-bx-svg{
+    fill: var(--white-text-color);
+    background-color: var(--active-and-hover-color);
+    border: 2px solid var(--active-and-hover-color);
+
+}
+.label-check .form-chk-bx{
+    appearance: none;
+}
+.label-check > span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--description-color);
+   
+}
+.condition-span{
+    padding-left: 30px;
+}
+.submit-bttn-container {
+    position: relative;
+}
+.send-bttn{
+    width: 200px;
+    height: 50px;
+    background-color: var(--webstudio-color);
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--white-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 
 /* MARK - SECTION 2 Our skills*/
 
@@ -584,11 +712,70 @@ header{
     background-color: var(--active-and-hover-color);
     color: var(--address-footer-color);
 }
+.find-us-container {
+    margin-right: 93px;
+}
 
-/* MARK -> PORTFOLIO PAGE */
-.footer-global-container{
+.footer-global-container {
     display: flex;
 }
+.subscribe-form-class{
+    display: flex;
+}
+.subscribe-container > p{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    margin-bottom: 20px;
+}
+.email-input-element {
+    width: 358px;
+    height: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.subscribe-btn{
+    width: 200px;
+    height: 50px;
+    background-color: var(--active-and-hover-color);
+    border: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--white-text-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.subscribe-twitter-svg{
+    fill: currentColor;
+}
+
+
+
+/* MARK -> PORTFOLIO PAGE */
+
 .button-choices{
     display: flex;
     justify-content: center;

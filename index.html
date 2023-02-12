@@ -440,6 +440,18 @@
           </ul>
 
         </div>
+      <div class="subscribe-container">
+          <p>Subscribe to the newsletter</p>
+          <form name="subscribe-form" class="subscribe-form-class">
+            <input type="email" name="email-input" placeholder="E-mail" class="email-input-element">
+            <button type="submit" class="subscribe-btn">Subscribe
+              <svg width="24" height="24" class="subscribe-twitter-svg">
+                <use href="./images/symbol-defs.svg#icon-twitter-icon"></use>
+              </svg>
+            </button>
+          </form>
+      </div>
+
       </div>
 
     </footer>
@@ -450,8 +462,49 @@
           <svg width="18" height="18" class="x-icon">
             <use href="./images/symbol-defs.svg#icon-close-black-18"></use>
           </svg>
-
         </button>
+        <h2 class="form-title">Leave your information and we'll call you back</h2>
+        <form name="contact-form" class="contact-form">
+          
+          <label>
+            Name
+            <input type="text" name="name" class="input-name">
+            <svg width="12" height="12" class="icon-person-svg">
+              <use href="./images/symbol-defs.svg#icon-person"></use>
+            </svg> 
+          </label>
+          <label>
+            Telephone
+            <input type="tel" name="telephone" class="input-name">
+            <svg width="12" height="12" class="icon-person-svg">
+              <use href="./images/symbol-defs.svg#icon-phone-icon"></use>
+            </svg> 
+          </label>
+          <label>
+              E-mail
+              <input type="email" name="email" class="input-name">
+              <svg width="12" height="12" class="icon-person-svg">
+                <use href="./images/symbol-defs.svg#icon-letter"></use>
+              </svg>
+          </label>
+          <label>
+              Comments
+              <textarea name="comments" cols="30" rows="10" placeholder="Enter the text" class="textarea"></textarea>
+          </label>
+          <div class="label-check-container">
+          <label class="label-check">
+            <input type="checkbox" name="check-bx" class="form-chk-bx">
+            <svg width="11" height="8" class="chk-bx-svg">
+              <use href="./images/symbol-defs.svg#icon-chk-bx"></use>
+            </svg>
+            <span> I agree with the newsletter and accept the Terms and <br><span class="condition-span"> Conditions</span> </span>
+          </label>
+          </div>
+          <div class="submit-bttn-container">
+            <button type="submit" class="send-bttn">Send</button>
+          </div>
+     
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
