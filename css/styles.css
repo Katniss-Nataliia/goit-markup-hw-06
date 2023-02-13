@@ -346,45 +346,46 @@ header{
 .textarea:focus{
     border: 1px solid var(--active-and-hover-color);
 }
-.label-check-container{
-    margin-top: 10px;
-    /* position: relative; */
-}
-.chk-bx-svg{
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--section-titles-color);
-    cursor: pointer;
-    fill: none;
-    border-radius: 2px;
-    margin-right: 9px;
-    /* position: absolute;
-    top:0;
-    left: 10px; */
+
+.my-label{
+    display: flex;
+    
 }
 
-.chk-bx-svg:hover,
-.chk-bx-svg:focus,
-.form-chk-bx:checked:focus + .chk-bx-svg{
+.my-checkbox-icon{
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--section-titles-color);
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-text-color);
+    transition: border var(--time) var(--time-function);
+}
+.chk-bx-svg{
+    fill: currentColor
+}
+.chk-bx-svg:hover + .my-label > .my-checkbox-icon,
+.chk-bx-svg:focus + .my-label>.my-checkbox-icon,
+.my-input-checkbox:checked + .my-label > .my-checkbox-icon{
     fill: var(--white-text-color);
     background-color: var(--active-and-hover-color);
     border: 2px solid var(--active-and-hover-color);
 
 }
-.label-check .form-chk-bx{
-    appearance: none;
-}
-.label-check > span{
+
+.terms-and-conditions{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--description-color);
-   
+    text-decoration: none;
 }
-.condition-span{
-    padding-left: 30px;
-}
+
 .submit-bttn-container {
     position: relative;
 }
@@ -695,7 +696,6 @@ header{
 .social-icon-link-svg{
     width: 44px;
     height: 44px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -744,11 +744,15 @@ header{
     padding: 16px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-right: 12px;
+    transition: border var(--time) var(--time-function);
 }
-
+.email-input-element:focus,
+.email-input-element:hover{
+    border: 1px solid var(--active-and-hover-color);
+    
+}
 .subscribe-btn{
     width: 200px;
     height: 50px;
