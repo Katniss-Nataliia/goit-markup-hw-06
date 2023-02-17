@@ -343,6 +343,7 @@ header{
     border-radius: 4px;
     cursor: pointer;
     transition: border var(--time) var(--time-function);
+    outline: none;
 }
 .textarea:hover,
 .textarea:focus{
